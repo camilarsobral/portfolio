@@ -19,6 +19,17 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     animation: ${fadeIn} 0.5s linear;
+
+    @media (max-width: 820px) {
+        padding: 4vh 6vw;
+    }
+
+    @media (max-width: 414px) {
+        padding: 3vh 5vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
 `
 
 export const Title = styled.div`
@@ -35,6 +46,18 @@ export const Title = styled.div`
     p {
         font-weight: 400;
         font-size: 1.29rem;
+    }
+
+    @media (max-width: 414px) {
+        align-items: center;
+
+        h4 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 `
 

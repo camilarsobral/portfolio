@@ -30,6 +30,28 @@ export const Container = styled.div`
         height: 100vh;
         background-color: rgba(255, 255, 255, 0.8);
     }
+
+    @media (max-width: 1280px) {
+        background-size: 70%;
+        background-position-x: -50px;
+        background-position-y: 135px;
+    }
+
+    @media (max-width: 820px) {
+        background-size: cover;
+        background-position-x: -550px;
+        background-position-y: -130px;
+    }
+
+    @media (max-width: 414px) {
+        background-size: cover;
+        background-position-x: -300px;
+        background-position-y: 130px;
+
+        &::before {
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+    }
 `
 
 export const ContainerItems = styled.ul`
@@ -43,17 +65,21 @@ export const ContainerItems = styled.ul`
     right: 0;
     bottom: 0;
     z-index: 9;
+
+    @media (max-width: 820px) {
+        padding: 4vh 5vw;
+    }
+
+    @media (max-width: 414px) {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 `
 
 export const Li = styled.li`
-    font-size: 2rem;
-    color: #000;
     cursor: pointer;
     animation: ${fadeIn} 0.5s linear;
-
-    span {
-        font-size: 1rem;
-    }
 
     a {
         text-decoration: none;
