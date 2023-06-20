@@ -19,7 +19,7 @@ export const Container = styled.div`
     background-size: 65%;
     background-repeat: no-repeat;
     background-position-x: -50px;
-    background-position-y: bottom 35px;
+    background-position-y: 35px;
 
     &::before {
         content: '';
