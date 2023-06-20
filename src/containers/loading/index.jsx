@@ -8,9 +8,9 @@ function Loading() {
 
     useEffect(() => {
         setTimeout(() => {
-            navigate('/home', { replace: false })
+            navigate('/home')
         }, 2000)
-    }, [navigate])
+    }, [])
 
     return (
         <Container>
