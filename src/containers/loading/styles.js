@@ -1,17 +1,16 @@
 import styled, { keyframes } from 'styled-components'
 
-const fadeOut = keyframes`
-    0% {
-        opacity: 1;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+const trackOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
 `
 
 export const Container = styled.div`
@@ -22,11 +21,11 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    animation: ${fadeOut} 2.5s linear;
 
     p {
         font-size: 2.3rem;
         font-weight: 300;
+        animation: ${trackOut} 2s cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
     }
 
     p.myname {

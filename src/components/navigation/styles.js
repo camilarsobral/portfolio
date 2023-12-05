@@ -10,10 +10,21 @@ const fadeIn = keyframes`
     }
 `
 
+const typing = keyframes`
+    from { width: 0 }
+    to { width: 100% }
+`
+
+const blink = keyframes`
+    from { border-color: transparent }
+    to { border-color: #fd84d4; }
+`
+
 export const Container = styled.div`
-    z-index: 99;
-    position: fixed;
-    padding: 5vh 5vw;
+    z-index: 9999;
+    position: absolute;
+    top: 80px;
+    padding: 0 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,21 +42,30 @@ export const Container = styled.div`
         gap: 50px;
     }
 `
+export const Typewriter = styled.div`
+    display: inline-block;
+
+    .typed-out {
+        overflow: hidden;
+        border-right: 0.15em solid #fd84d4;
+        white-space: nowrap;
+        font-size: 1.3rem;
+        width: 0;
+        animation: ${typing} 1.5s steps(20, end) forwards,
+            ${blink} 0.8s infinite;
+        font-family: 'Raleway', sans-serif;
+    }
+`
 
 export const Title = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-transform: uppercase;
 
     h4 {
-        font-weight: 900;
-        font-size: 2.3rem;
-    }
-
-    p {
-        font-weight: 400;
-        font-size: 1.29rem;
+        font-weight: 300;
+        font-size: 3.2rem;
+        font-family: 'Raleway', sans-serif;
     }
 
     @media (max-width: 414px) {
@@ -63,7 +83,7 @@ export const Title = styled.div`
 
 export const Links = styled.ul`
     list-style: none;
-    text-transform: lowercase;
+    text-transform: uppercase;
     display: flex;
     gap: 25px;
 `
@@ -74,7 +94,7 @@ export const Li = styled.li`
     a {
         text-decoration: none;
         color: #000;
-        font-size: ${(props) => (props.isActive ? '1.3rem' : '1.1rem')};
+        font-size: 1rem;
         font-weight: ${(props) => (props.isActive ? '700' : '400')};
         transition: 0.3s;
 

@@ -1,7 +1,5 @@
 import styled, { keyframes } from 'styled-components'
 
-import Background from '../../assets/topography.png'
-
 const fadeIn = keyframes`
     from {
         opacity: 0;
@@ -13,23 +11,11 @@ const fadeIn = keyframes`
 `
 
 export const Container = styled.div`
-    background: url(${Background});
+    width: 100vw;
     height: 100vh;
-    width: 100%;
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position-x: -50px;
-    background-position-y: 35px;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(255, 255, 255, 0.8);
-    }
+    position: relative;
+    padding: 50px;
+    z-index: 999;
 
     @media (max-width: 1280px) {
         background-size: 70%;
@@ -53,6 +39,13 @@ export const Container = styled.div`
         }
     }
 `
+export const Wrapper = styled.div`
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 1px solid #bfbfbf;
+`
 
 export const ContainerItems = styled.ul`
     list-style: none;
@@ -60,10 +53,9 @@ export const ContainerItems = styled.ul`
     justify-content: flex-end;
     align-items: flex-end;
     gap: 20px;
-    padding: 6vh 5vw;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 30px;
+    bottom: 30px;
     z-index: 9;
 
     @media (max-width: 820px) {

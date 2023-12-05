@@ -15,7 +15,7 @@ function Loading() {
     return (
         <Container>
             <p className="myname">Camila Sobral</p>
-            <p>Portfólio</p>
+            <p>Portfolio</p>
         </Container>
     )
 }

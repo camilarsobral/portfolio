@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 
-import { Container, Title, Links, Li } from './styles'
+import { Container, Title, Typewriter, Links, Li } from './styles'
 
 function Navigation() {
     const { pathname } = useLocation()
@@ -9,7 +9,9 @@ function Navigation() {
         <Container>
             <Title>
                 <h4>Camila Sobral</h4>
-                <p>Programadora Front-end</p>
+                <Typewriter>
+                    <div className="typed-out">Full-Stack Developer_</div>
+                </Typewriter>
             </Title>
             <Links>
                 <Li isActive={pathname === '/home'}>
