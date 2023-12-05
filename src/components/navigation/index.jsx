@@ -14,14 +14,14 @@ function Navigation() {
                 </Typewriter>
             </Title>
             <Links>
-                <Li isActive={pathname === '/home'}>
+                <Li isActive={pathname === '/home'} className="notranslate">
                     <Link to={'/home'}>Home</Link>
                 </Li>
-                <Li isActive={pathname === '/projects'}>
-                    <Link to={'/projects'}>Projetos</Link>
+                <Li isActive={pathname === '/projects'} className="notranslate">
+                    <Link to={'/projects'}>Projects</Link>
                 </Li>
-                <Li isActive={pathname === '/contact'}>
-                    <Link to={'/contact'}>Contato</Link>
+                <Li isActive={pathname === '/contact'} className="notranslate">
+                    <Link to={'/contact'}>Contat</Link>
                 </Li>
             </Links>
         </Container>

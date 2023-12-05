@@ -5,7 +5,7 @@ function Home() {
         <Container>
             <ContainerItems>
                 <TextBox>
-                    <p>
+                    <p className="notranslate">
                         <span>PT</span> Olá, sou uma Desenvolvedora Web Full
                         Stack apaixonada por design. Bem-vindo ao meu universo
                         digital, onde linhas de código se traduzem em
@@ -19,7 +19,7 @@ function Home() {
                     </p>
                     <br />
                     <br />
-                    <p>
+                    <p className="notranslate">
                         <span>EN</span> Hello. I am a passionate Full-Stack Web
                         Developer with a love for design. Welcome to my digital
                         universe, where lines of code translate into amazing

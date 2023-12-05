@@ -14,6 +14,7 @@ const trackOut = keyframes`
 `
 
 export const Container = styled.div`
+    background: #e6e6e6;
     height: 100vh;
     width: 100%;
     display: flex;
