@@ -21,7 +21,7 @@ function Navigation() {
                     <Link to={'/projects'}>Projects</Link>
                 </Li>
                 <Li isActive={pathname === '/contact'} className="notranslate">
-                    <Link to={'/contact'}>Contat</Link>
+                    <Link to={'/contact'}>Contact</Link>
                 </Li>
             </Links>
         </Container>
